@@ -1,0 +1,26 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": [
+    "svelte",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "mdx",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.runesLegacyModeCodeLens.enable": false,
+  "svelte.plugin.svelte.defaultScriptLanguage": "ts",
+  "github.copilot.chat.commitMessageGeneration.instructions": [{ "file": "COMMITGUIDELINES.md" }],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  }
+}

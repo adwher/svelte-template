@@ -1,0 +1,30 @@
+{
+  "useTabs": false,
+  "singleQuote": false,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "printWidth": 100,
+  "bracketSameLine": false,
+  "htmlWhitespaceSensitivity": "ignore",
+  "plugins": ["prettier-plugin-svelte", "@trivago/prettier-plugin-sort-imports"],
+  "importOrderSeparation": true,
+  "importOrderParserPlugins": ["typescript"],
+  "importOrder": [
+    "node:(.+)",
+    "<THIRD_PARTY_MODULES>",
+    "^(virtual:|~icons)(.+)$",
+    "^\\$app/(.+)$",
+    "^\\$env/(.+)$",
+    "^\\$/(?!.*\\.svelte$)(.*)$",
+    "^\\$/(.+)(\\.svelte)$",
+    "^[./]"
+  ],
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ]
+}

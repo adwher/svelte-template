@@ -1,0 +1,26 @@
+html,
+body,
+dialog {
+  --uno: font-sans antialiased tracking-wide select-none text-paragraph bg-wallpaper;
+
+  font-size: 12pt;
+  font-weight: 400;
+  tab-size: 2;
+}
+
+::selection {
+  --uno: bg-accent-200 text-accent-800;
+}
+
+::placeholder {
+  --uno: text-background-200/20;
+}
+
+hr {
+  --uno: border-background-200 border-none;
+  --uno: border-r border-solid;
+  --uno: border-b border-solid;
+
+  height: auto;
+  align-self: stretch;
+}
