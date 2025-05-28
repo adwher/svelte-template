@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: testing-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the codebase
+        uses: actions/checkout@v4
+
+      - name: Copy the ".env.example"
+        # SvelteKit requires a ".env" file to generate the types for "$env/*"
+        # See https://svelte.dev/docs/kit/$env-static-public
+        run: cp .env.example .env
+
+      - name: Setup "bun"
+        uses: oven-sh/setup-bun@v2
+
+      - name: Setup dependencies
+        run: bun install
+
+      - name: Checking Svelte
+        run: bun run check:svelte
+
+      - name: Checking linting
+        run: bun run check:lint
+
+      - name: Checking format
+        run: bun run check:format

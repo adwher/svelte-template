@@ -1,0 +1,24 @@
+html,
+body,
+dialog {
+  --uno: text-paragraph bg-white font-sans tracking-wide select-none;
+
+  font-size: 12pt;
+}
+
+::selection {
+  --uno: bg-amber-200 text-amber-800;
+}
+
+::placeholder {
+  --uno: text-paragraph/40;
+}
+
+hr {
+  --uno: border-gray-200 border-none;
+  --uno: border-r border-solid;
+  --uno: border-b border-solid;
+
+  height: auto;
+  align-self: stretch;
+}
